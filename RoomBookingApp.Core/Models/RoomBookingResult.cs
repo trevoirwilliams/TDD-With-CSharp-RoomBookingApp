@@ -1,11 +1,10 @@
-﻿using System;
+﻿using RoomBookingApp.Core.Enums;
+using System;
 
 namespace RoomBookingApp.Core.Models
 {
-    public class RoomBookingResult
+    public class RoomBookingResult : RoomBookingBase
     {
-        public string FullName { get; set; }
-        public string Email { get; set; }
-        public DateTime Date { get; set; }
+        public BookingResultFlag Flag { get; set; }
     }
 }
