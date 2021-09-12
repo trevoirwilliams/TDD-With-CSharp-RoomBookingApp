@@ -63,7 +63,7 @@ namespace RoomBookingApp.Core
         public void Should_Save_Room_Booking_Request()
         {
             RoomBooking savedBooking = null;
-            _roomBookingServiceMock.Setup(q => q.Save(It.IsAny<RoomBooking>()))
+            _roomBookingServiceMock.Setup(q => q.SaveBooking(It.IsAny<RoomBooking>()))
                 .Callback<RoomBooking>(booking =>
                 {
                     savedBooking = booking;
@@ -71,7 +71,7 @@ namespace RoomBookingApp.Core
 
             _processor.BookRoom(_request);
 
-            _roomBookingServiceMock.Verify(q => q.Save(It.IsAny<RoomBooking>()), Times.Once);
+            _roomBookingServiceMock.Verify(q => q.SaveBooking(It.IsAny<RoomBooking>()), Times.Once);
 
             savedBooking.ShouldNotBeNull();
             savedBooking.FullName.ShouldBe(_request.FullName);
@@ -85,7 +85,7 @@ namespace RoomBookingApp.Core
         {
             _availableRooms.Clear();
             _processor.BookRoom(_request);
-            _roomBookingServiceMock.Verify(q => q.Save(It.IsAny<RoomBooking>()), Times.Never);
+            _roomBookingServiceMock.Verify(q => q.SaveBooking(It.IsAny<RoomBooking>()), Times.Never);
         }
 
         [Theory]
@@ -114,7 +114,7 @@ namespace RoomBookingApp.Core
             }
             else
             {
-                _roomBookingServiceMock.Setup(q => q.Save(It.IsAny<RoomBooking>()))
+                _roomBookingServiceMock.Setup(q => q.SaveBooking(It.IsAny<RoomBooking>()))
                .Callback<RoomBooking>(booking =>
                {
                    booking.Id = roomBookingId.Value;

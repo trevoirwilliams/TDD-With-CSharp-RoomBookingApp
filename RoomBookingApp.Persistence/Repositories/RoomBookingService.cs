@@ -22,7 +22,12 @@ namespace RoomBookingApp.Persistence.Repositories
             return _context.Rooms.Where(q => !q.RoomBookings.Any(x => x.Date == date)).ToList();
         }
 
-        public void Save(RoomBooking roomBooking)
+        public IEnumerable<Room> GetRooms()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveBooking(RoomBooking roomBooking)
         {
             _context.Add(roomBooking);
             _context.SaveChanges();

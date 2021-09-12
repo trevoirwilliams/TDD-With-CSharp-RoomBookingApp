@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RoomBookingApp.Persistence": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\Trevoir\\source\\repos\\RoomBookingApp\\RoomBookingApp.Persistence\\"
+    }
+  }
+}

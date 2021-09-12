@@ -56,7 +56,7 @@ namespace RoomBookingApp.Persistence.Tests
 
             using var context = new RoomBookingAppDbContext(dbOptions);
             var roomBookingService = new RoomBookingService(context);
-            roomBookingService.Save(roomBooking);
+            roomBookingService.SaveBooking(roomBooking);
 
             var bookings = context.RoomBookings.ToList();
             var booking = Assert.Single(bookings);
