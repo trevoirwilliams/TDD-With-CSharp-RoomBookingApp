@@ -1,6 +1,7 @@
 # TDD-With-CSharp-RoomBookingApp
 Educational Project to demonstrate Test Driven Development in C#
 
+
 Test Driven Development (TDD) is a powerful approach to build solid and robust software. In this course, you will learn the skills you need to be able to apply TDD in your .NET projects. Unit Testing is a type of software testing where code is written to automate the testing of sub-sections of an entire application. This methodology gives more functional coverage and reduces the need for manual regression testing when the application's code changes. The purpose is to validate that each unit of the software code performs as expected. 
 You will discover the basics of unit testing and about the red-green-refactor cycle. You will also learn how to test and implement business logic in a .NET Core application using xUnit as a testing framework and Moq as a mocking library. 
 
