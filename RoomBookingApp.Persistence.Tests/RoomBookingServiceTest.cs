@@ -16,7 +16,7 @@ namespace RoomBookingApp.Persistence.Tests
         public void Should_Return_Available_Rooms()
         {
             //Arrange
-            var date = new DateTime(2021, 06, 09);
+            var date = new DateTime(2021, 06, 09);       
 
             var dbOptions = new DbContextOptionsBuilder<RoomBookingAppDbContext>()
                 .UseInMemoryDatabase("AvailableRoomTest")
